@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-<h3>New Loan agreement</h3>
+<h3>New credit agreement</h3>
 
 <table>
     <p style="margin: auto; text-align:center; background-color: #A7C942; width: 50%;">Traffic on credit</p><br>
@@ -68,12 +68,6 @@
         <option>USD</option>
         <option>RUB</option>
     </select></p>
-
-<%--    <label>Currency</label><br>--%>
-<%--    <input name="currency"/><br><br>--%>
-
-<%--    <label>Cod Credit</label><br>--%>
-<%--    <input name="codCredit"/><br><br>--%>
 
     <label>Credit code</label>
     <p><select name="codCredit">

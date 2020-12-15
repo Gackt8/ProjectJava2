@@ -56,21 +56,11 @@
       <td>${credit.percent}</td>
       <td>
         <a href='<c:url value="/grafic?id=${credit.idClient}" />'>Grafic credit</a> |
-<%--&lt;%&ndash;        <form method="post" action='<c:url value="/delete" />' style="display:inline;">&ndash;%&gt;--%>
-<%--&lt;%&ndash;          <input type="hidden" name="id" value="${find.id}">&ndash;%&gt;--%>
-<%--&lt;%&ndash;          <input type="submit" value="Delete">&ndash;%&gt;--%>
-<%--&lt;%&ndash;        </form>&ndash;%&gt;--%>
+
       </td>
     </tr>
     </c:forEach>
-<%--    <tr>--%>
-<%--        <c:forEach var="paymentValue" items="${paymentValues}">--%>
-<%--          <tr>--%>
-<%--            <td>${paymentValue.ratePerMonth}</td>--%>
-<%--            <td>${paymentValue.ratePerMonth2}</td>--%>
-<%--          </tr>--%>
-<%--        </c:forEach>--%>
-<%--    </tr>--%>
+
   <br>
 
 </table>
@@ -89,19 +79,6 @@
   </tr>
     </c:forEach>
 </table>
-
-
-<%--<table>--%>
-<%--  <p style="background-color: #C2C2FF; text-align: center; width: 70%;">Credits Name</p>--%>
-<%--  <tr><th>Number of client</th><th>Name client</th><th>Number credit</th></tr>--%>
-
-<%--  <c:forEach var="paymentValue" items="${paymentValues}">--%>
-<%--    <tr>--%>
-<%--      <td>${paymentValue.ratePerMonth}</td>--%>
-<%--      <td>${paymentValue.ratePerMonth2}</td>--%>
-<%--    </tr>--%>
-<%--  </c:forEach>--%>
-<%--</table>--%>
 
 </body>
 </html>
