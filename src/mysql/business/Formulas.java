@@ -1,5 +1,6 @@
 package mysql.business;
 
+import mysql.business.BuilderClass.JThread;
 import mysql.business.BuilderClass.PaymentValue;
 import mysql.business.BuilderClass.PaymentValueBuilderMpl;
 
@@ -20,11 +21,44 @@ public class Formulas {
 
         double year = period*12; // всего месяцев
 
-        ArrayList<ArrayList<Double>> doubles = new ArrayList<>();
+        ArrayList<List<Double>> doubles = new ArrayList<>();
+
+//        ArrayList<Double> num = new ArrayList<Double>();
+//        ArrayList<Double> mainWithoutProcent = new ArrayList<Double>();
+//        ArrayList<Double> procentList = new ArrayList<Double>();
+//        ArrayList<Double> mainWithProcent = new ArrayList<Double>();
+//
+//        for (double i=1; i<=year; i++) {
+////            new JThread("JThread " + i).start();
+//
+//            double percentEveryMonth = summary * result; //процент каждый месяц
+//            double result2 = math(percentEveryMonth, 3);
+//
+//
+//            double pow = Math.pow(1 + result, -year);
+//            double result3 = math(pow, 5);
+//
+//            double paymentEveryMonthWithPercent = result2 / (1 - result3); //платёж с процентами каждый месяц
+//            double result4 = math(paymentEveryMonthWithPercent, 2);
+//
+//
+//            double paymentEveryMonth = paymentEveryMonthWithPercent - result2; //платёж каждый месяц без процентов
+//            double result5 = math(paymentEveryMonth, 2);
+//
+//            num.add(i);
+//            mainWithoutProcent.add(result5);
+//            procentList.add(result2);
+//            mainWithProcent.add(result4);
+//
+////            doubles.add(d);
+//
+//        }
 
         for (double i=1; i<=year; i++) {
-//
+//            new JThread("JThread " + i).start();
+
             ArrayList<Double> d = new ArrayList<Double>();
+
             double percentEveryMonth = summary * result; //процент каждый месяц
             double result2 = math(percentEveryMonth, 3);
 
@@ -51,13 +85,11 @@ public class Formulas {
         double percentEveryMonth = summary * result; //процент каждый месяц
         double result2 = math(percentEveryMonth, 3);
 
-
         double pow = Math.pow(1 + result, -year);
         double result3 = math(pow, 5);
 
         double paymentEveryMonthWithPercent = result2 / (1 - result3); //платёж с процентами каждый месяц
         double result4 = math(paymentEveryMonthWithPercent, 2);
-
 
         double paymentEveryMonth = paymentEveryMonthWithPercent - result2; //платёж каждый месяц без процентов
         double result5 = math(paymentEveryMonth, 2);
@@ -80,6 +112,10 @@ public class Formulas {
                 .setPaymentEveryMonth(result5)
                 .setAllSummary(result6)
                 .setOverpayment(result7)
+//                .setNum(num)
+//                .setMainWithProcent(mainWithProcent)
+//                .setMainWithoutProcent(mainWithoutProcent)
+//                .setProcentList(procentList)
                 .setMonth(doubles)
                 .build();
 
